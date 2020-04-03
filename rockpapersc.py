@@ -5,7 +5,7 @@
 # t = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
 
 # assign a random play for the computer from list of variables
-# cinput = t[randint(0, 2)]
+# input = t[randint(0, 2)]
 
 # setup player input and starting game prompt
 # get = input("Rock, Paper, Scissors, Lizard, Spock?")
@@ -46,16 +46,6 @@ def getuser():
     else:
         getuser()
     return userin
-# beats = {'paper':'rock'
-#          'rock':'scissors'
-#          'scissors':'paper'
-#          'lizard':'spock'
-#          'lizard':'paper'
-#          'paper':'spock'
-#          'scissors:'lizard'
-#          'rock':'lizard'
-#          'spock':'scissors'
-#          'spock':'rock' }
 
 def getcomp():
     compin = randint(0, 4)
@@ -87,3 +77,30 @@ while again != 'no':
     calc(getuser(), getcomp())
     again = input('Would you like to play again? ')
 print('Thank you for playing.')
+
+
+
+# beats = {'paper':'rock'
+#          'rock':'scissors'
+#          'scissors':'paper'
+#          'lizard':'spock'
+#          'lizard':'paper'
+#          'paper':'spock'
+#          'scissors:'lizard'
+#          'rock':'lizard'
+#          'spock':'scissors'
+#          'spock':'rock' }
+beats = {'paper': 'scissors',
+         'rock': 'paper',
+         'scissors': 'rock'}
+
+computer_choice = getcomp()
+user_choice = getuser()
+
+if user_choice == beats[computer_choice]:
+    print "{} beats {}, you win!".format(user_choice, computer_choice)
+elif computer_choice == beats[user_choice]:
+    print"{} beats {}, computer wins!".format(computer_choice, user_choice)
+else:
+    print "Tie."
+    
