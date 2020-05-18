@@ -46,16 +46,15 @@ def getuser():
     else:
         getuser()
     return userin
+
 # beats = {'paper':'rock'
-#          'rock':'scissors'
-#          'scissors':'paper'
-#          'lizard':'spock'
-#          'lizard':'paper'
-#          'paper':'spock'
-#          'scissors:'lizard'
-#          'rock':'lizard'
-#          'spock':'scissors'
-#          'spock':'rock' }
+#         'rock':'scissors'
+#         'scissors':'paper'
+#         'lizard':'spock'
+#         'lizard':'paper'
+#         'paper':'spock'
+#         'scissors:'lizard'          'rock':'lizard'
+#         'spock':'scissors'
 
 def getcomp():
     compin = randint(0, 4)
